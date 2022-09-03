@@ -46,7 +46,7 @@ public class RuzicaRadivojevic {
     //1. Implementirati metodu int brojPonavljanja(String s, String recenica) koja vraća broj ponavljanja stringa "s" u rečenici. Hint: istražiti s.split("") metodu.
     //       Npr. ("cao", "cao kako si cao") -> 2
 
-    public static int[] brojPonavljanja(String s, String recenica) {
+    public static int brojPonavljanja(String s, String recenica) {
         String[] razbijenaRec = recenica.split(" ");
 
         int brojac = 0;
@@ -57,7 +57,7 @@ public class RuzicaRadivojevic {
             }
         }
 
-        return new int[]{brojac};
+        return brojac;
 
     }
     //2. Implementirati metodu int zbirCifara(int n) koja sabira cifre sve dok rezultat ne bude samo jedna cifra.
@@ -209,7 +209,7 @@ public class RuzicaRadivojevic {
         String rec = sc.nextLine();
         System.out.print("\nUnesite recenicu u kojoj zelite da proverite koliko se prethodno uneta rec ponavlja: ");
         String recenica = sc.nextLine();
-        System.out.println("\nTrazena rec se ponavlja " + Arrays.toString(brojPonavljanja(rec, recenica)) + " puta u recenici.");
+        System.out.println("\nTrazena rec se ponavlja " + brojPonavljanja(rec, recenica) + " puta u recenici.");
 
         System.out.println("\n############################################################################################");
         System.out.print("\n2.Zadatak - Unesite dvocifren, trocifren ili veci broj za koji zelite da izracunate jednocifren zbir: ");
